@@ -15,11 +15,8 @@
 -->
 <resources>
 
-    <!-- General -->
-    <string name="app_name">Theme Test</string>
-    
     <!-- Main activity -->
-    <string name="light_theme">Helles Theme</string>
-    <string name="dark_theme">Dunkles Theme</string>
+    <string name="light_theme">Light Theme</string>
+    <string name="dark_theme">Dark Theme</string>
     <string name="system_theme">System Theme</string>
 </resources>
