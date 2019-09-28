@@ -12,6 +12,12 @@
 -->
 <resources>
 
+    <color name="bg_tint_day">#ffffffff</color>
+    <color name="bg_tint_night">@color/darkkat_blue_blue_grey</color>
+    <color name="text_night">#ffffffff</color>
+    <color name="text_day">#de000000</color>
+    <color name="icon_tint_day">#ff000000</color>
+    <color name="icon_tint_night">#ffffffff</color>
     <!-- DarkKat colors -->
     <color name="darkkat_blue_grey">#ff1b1f23</color>
     <color name="darkkat_blue_blue_grey">#ff1f2429</color>

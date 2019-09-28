@@ -16,16 +16,16 @@
 <resources>
 
     <!-- General -->
-    <string name="app_name">Theme Test</string>
+    <string name="app_name">Design Test</string>
 
     <!-- Main activity -->
-    <string name="action_settings">Settings</string>
-    <string name="system_theme_title">System Theme</string>
-    <string name="app_theme_title">App Theme</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="system_theme_title">System Design</string>
+    <string name="app_theme_title">App Design</string>
 
     <!-- Settings -->
-    <string name="cat_theme_title">Theme</string>
-    <string name="dlg_choose_theme_title">Choose a theme</string>
-    <string name="day_theme">Light Theme</string>
-    <string name="night_theme">Dark Theme</string>
+    <string name="cat_theme_title">Design</string>
+    <string name="dlg_choose_theme_title">Wähle ein Design</string>
+    <string name="day_theme">Helles Design</string>
+    <string name="night_theme">Dunkles Design</string>
 </resources>
