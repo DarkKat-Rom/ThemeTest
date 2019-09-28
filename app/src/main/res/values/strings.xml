@@ -25,7 +25,11 @@
 
     <!-- Settings -->
     <string name="cat_theme_title">Theme</string>
+    <string name="cat_theme_image_title">Theme image</string>
     <string name="dlg_choose_theme_title">Choose a theme</string>
     <string name="day_theme">Light Theme</string>
     <string name="night_theme">Dark Theme</string>
+    <string name="colorize_theme_image_title">Colored theme image</string>
+    <string name="colorize_theme_image_summary_on">Image will be colored</string>
+    <string name="colorize_theme_image_summary_off">Image will be black or white</string>
 </resources>

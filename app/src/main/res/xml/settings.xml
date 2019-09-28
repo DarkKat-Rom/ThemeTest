@@ -20,11 +20,26 @@
         <ListPreference
             app:key="app_theme"
             app:title="@string/app_theme_title"
+            app:icon="@drawable/ic_theme"
             app:defaultValue="theme_follow_system"
             app:dialogTitle="@string/dlg_choose_theme_title"
             app:entries="@array/app_theme_entries"
             app:entryValues="@array/app_theme_values"
-            app:useSimpleSummaryProvider="true"/>
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="cat_theme_image"
+        app:title="@string/cat_theme_image_title">
+
+        <SwitchPreferenceCompat
+            app:key="colorize_theme_image"
+            app:title="@string/colorize_theme_image_title"
+            app:icon="@drawable/ic_colorize"
+            app:defaultValue="false"
+            app:summaryOn="@string/colorize_theme_image_summary_on"
+            app:summaryOff="@string/colorize_theme_image_summary_off" />
 
     </PreferenceCategory>
 </androidx.preference.PreferenceScreen>

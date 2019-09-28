@@ -31,6 +31,7 @@ import androidx.fragment.app.Fragment;
 
 import net.darkkatrom.themetest.R;
 import net.darkkatrom.themetest.utils.ThemeHelper;
+import net.darkkatrom.themetest.utils.Config;
 
 public class MainFragment extends Fragment {
 
@@ -85,23 +86,31 @@ public class MainFragment extends Fragment {
         int appThemeIconColor;
         Drawable appThemeIcon;
 
+        boolean colorizeImage = Config.getColorizeThemeImage(getActivity());
+
         switch (systemTheme) {
             case AppCompatDelegate.MODE_NIGHT_NO:
                 systemThemeBgColor = getActivity().getColor(R.color.bg_tint_day);
                 systemThemeTextColor = getActivity().getColor(R.color.text_day);
-                systemThemeIconColor = getActivity().getColor(R.color.icon_tint_day);
+                systemThemeIconColor =  colorizeImage
+                        ? getActivity().getColor(R.color.icon_tint_day_colored)
+                        : getActivity().getColor(R.color.icon_tint_day);
                 systemThemeIcon = getActivity().getDrawable(R.drawable.ic_day);
                 break;
             case AppCompatDelegate.MODE_NIGHT_YES:
                 systemThemeBgColor = getActivity().getColor(R.color.bg_tint_night);
                 systemThemeTextColor = getActivity().getColor(R.color.text_night);
-                systemThemeIconColor = getActivity().getColor(R.color.icon_tint_night);
+                systemThemeIconColor = colorizeImage
+                        ? getActivity().getColor(R.color.icon_tint_night_colored)
+                        : getActivity().getColor(R.color.icon_tint_night);
                 systemThemeIcon = getActivity().getDrawable(R.drawable.ic_night);
                 break;
             default:
                 systemThemeBgColor = getActivity().getColor(R.color.bg_tint_day);
                 systemThemeTextColor = getActivity().getColor(R.color.text_day);
-                systemThemeIconColor = getActivity().getColor(R.color.icon_tint_day);
+                systemThemeIconColor = colorizeImage
+                        ? getActivity().getColor(R.color.icon_tint_day_colored)
+                        : getActivity().getColor(R.color.icon_tint_day);
                 systemThemeIcon = getActivity().getDrawable(R.drawable.ic_day);
                 break;
         }
@@ -110,13 +119,17 @@ public class MainFragment extends Fragment {
             case AppCompatDelegate.MODE_NIGHT_NO:
                 appThemeBgColor = getActivity().getColor(R.color.bg_tint_day);
                 appThemeTextColor = getActivity().getColor(R.color.text_day);
-                appThemeIconColor = getActivity().getColor(R.color.icon_tint_day);
+                appThemeIconColor = colorizeImage
+                        ? getActivity().getColor(R.color.icon_tint_day_colored)
+                        : getActivity().getColor(R.color.icon_tint_day);
                 appThemeIcon = getActivity().getDrawable(R.drawable.ic_day);
                 break;
             case AppCompatDelegate.MODE_NIGHT_YES:
                 appThemeBgColor = getActivity().getColor(R.color.bg_tint_night);
                 appThemeTextColor = getActivity().getColor(R.color.text_night);
-                appThemeIconColor = getActivity().getColor(R.color.icon_tint_night);
+                appThemeIconColor = colorizeImage
+                        ? getActivity().getColor(R.color.icon_tint_night_colored)
+                        : getActivity().getColor(R.color.icon_tint_night);
                 appThemeIcon = getActivity().getDrawable(R.drawable.ic_night);
                 break;
             default:

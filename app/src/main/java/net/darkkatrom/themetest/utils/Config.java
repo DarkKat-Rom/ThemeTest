@@ -23,8 +23,9 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.preference.PreferenceManager;
  
 public class Config {
-    public static final String PREF_KEY_APP_THEME  = "app_theme";
-
+    public static final String PREF_KEY_APP_THEME             = "app_theme";
+    public static final String PREF_KEY_COLORIZE_THEME_IMAGE  = "colorize_theme_image";
+    
     public static final String THEME_DAY =           "theme_day";
     public static final String THEME_NIGHT =         "theme_night";
     public static final String THEME_FOLLOW_SYSTEM = "theme_follow_system";
@@ -47,5 +48,11 @@ public class Config {
                 break;
         }
         return themeInt;
+    }
+    
+    public static boolean getColorizeThemeImage(Context context) {
+        SharedPreferences prefs = PreferenceManager
+                .getDefaultSharedPreferences(context);
+        return prefs.getBoolean(PREF_KEY_COLORIZE_THEME_IMAGE, false);
     }
  }

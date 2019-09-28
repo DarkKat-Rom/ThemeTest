@@ -13,6 +13,9 @@
 <resources>
 
     <!-- Material based colors -->
+    <color name="material_blue_300">#ff64b5f6</color>
     <color name="material_blue_500">#ff2196f3</color>
     <color name="material_blue_700">#ff1976d2</color>
+    <color name="material_orange_200">#ffffcc80</color>
+    <color name="material_orange_700">#fff57c00</color>
 </resources>
