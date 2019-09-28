@@ -18,6 +18,9 @@ package net.darkkatrom.themetest;
 
 import android.app.Application;
 
+import net.darkkatrom.themetest.utils.Config;
+import net.darkkatrom.themetest.utils.ThemeHelper;
+
 public class ThemeTestApplication extends Application {
 
     public void onCreate() {

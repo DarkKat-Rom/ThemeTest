@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.darkkatrom.themetest;
+package net.darkkatrom.themetest.utils;
 
 import android.app.UiModeManager;
 import android.content.Context;

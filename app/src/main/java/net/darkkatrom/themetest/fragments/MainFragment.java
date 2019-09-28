@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.darkkatrom.themetest;
+package net.darkkatrom.themetest.fragments;
 
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
@@ -29,9 +29,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
+import net.darkkatrom.themetest.R;
+import net.darkkatrom.themetest.utils.ThemeHelper;
+
 public class MainFragment extends Fragment {
 
-    static final String TAG = "MainFragmentTag";
+    public static final String TAG = "MainFragmentTag";
     
     private boolean mViewCreated = false;
     private View mRootView;

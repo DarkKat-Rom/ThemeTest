@@ -14,16 +14,20 @@
  * limitations under the License.
  */
 
-package net.darkkatrom.themetest;
+package net.darkkatrom.themetest.fragments;
 
 import android.os.Bundle;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
+import net.darkkatrom.themetest.R;
+import net.darkkatrom.themetest.utils.Config;
+import net.darkkatrom.themetest.utils.ThemeHelper;
+
 public class SettingsFragment extends PreferenceFragmentCompat {
 
-    static final String TAG = "SettingsFragmentTag";
+    public static final String TAG = "SettingsFragmentTag";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {

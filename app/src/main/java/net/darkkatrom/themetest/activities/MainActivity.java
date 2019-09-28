@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.darkkatrom.themetest;
+package net.darkkatrom.themetest.activities;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,6 +24,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.appcompat.widget.Toolbar;
+
+import net.darkkatrom.themetest.R;
+import net.darkkatrom.themetest.fragments.MainFragment;
+import net.darkkatrom.themetest.fragments.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
