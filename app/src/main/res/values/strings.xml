@@ -18,6 +18,9 @@
     <!-- General -->
     <string name="app_name">Theme Test</string>
 
+    <!-- Toolbar -->
+    <string name="toolbar_settings_subtitle">Settings</string>
+
     <!-- Main activity -->
     <string name="action_settings">Settings</string>
     <string name="system_theme_title">System Theme</string>

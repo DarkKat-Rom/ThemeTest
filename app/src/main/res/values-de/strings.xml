@@ -18,6 +18,9 @@
     <!-- General -->
     <string name="app_name">Design Test</string>
 
+    <!-- Toolbar -->
+    <string name="toolbar_settings_subtitle">Einstellungen</string>
+
     <!-- Main activity -->
     <string name="action_settings">Einstellungen</string>
     <string name="system_theme_title">System Design</string>
@@ -29,7 +32,6 @@
     <string name="dlg_choose_theme_title">Wähle ein Design</string>
     <string name="day_theme">Helles Design</string>
     <string name="night_theme">Dunkles Design</string>
-
     <string name="colorize_theme_image_title">Farbiges Design Bild</string>
     <string name="colorize_theme_image_summary_on">Design Bild wird farbig dargestellt</string>
     <string name="colorize_theme_image_summary_off">Design Bild wird schwarz oder weiß dargestellt</string>

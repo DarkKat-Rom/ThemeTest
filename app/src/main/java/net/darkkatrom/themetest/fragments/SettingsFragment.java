@@ -18,6 +18,7 @@ package net.darkkatrom.themetest.fragments;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
@@ -42,5 +43,12 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                         return true;
                     }
                 });
+    }
+
+    @Override
+    public void onResume() {
+        ((AppCompatActivity) getActivity())
+                    .getSupportActionBar().setTitle(R.string.toolbar_settings_subtitle);
+        super.onResume();
     }
 }

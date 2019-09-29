@@ -21,25 +21,37 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
 import net.darkkatrom.themetest.R;
+import net.darkkatrom.themetest.activities.MainActivity;
 import net.darkkatrom.themetest.utils.ThemeHelper;
 import net.darkkatrom.themetest.utils.Config;
 
 public class MainFragment extends Fragment {
 
     public static final String TAG = "MainFragmentTag";
-    
+
     private boolean mViewCreated = false;
     private View mRootView;
-    
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setHasOptionsMenu(true);
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
@@ -52,6 +64,21 @@ public class MainFragment extends Fragment {
         mRootView = view;
         mViewCreated = true;
         updateContent();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            ((MainActivity) getActivity()).showFragment(SettingsFragment.TAG);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void updateContent() {
@@ -67,6 +94,9 @@ public class MainFragment extends Fragment {
         if (systemTheme == ThemeHelper.THEME_ERROR) {
             return;
         }
+
+        ((AppCompatActivity) getActivity())
+                    .getSupportActionBar().setTitle(R.string.app_name);
 
         int appTheme = ThemeHelper.getAppTheme(getActivity());
 
@@ -139,7 +169,7 @@ public class MainFragment extends Fragment {
                 appThemeIcon = systemThemeIcon;
                 break;
         }
-        
+
         systemThemeLayout.setBackgroundColor(systemThemeBgColor);
         systemThemeLayoutTitle.setTextColor(systemThemeTextColor);
         systemThemeLayoutImage.setImageTintList(ColorStateList.valueOf(systemThemeIconColor));
